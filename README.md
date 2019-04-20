@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d270f2b8-4811-454b-be20-d821284a7570/deploy-status)](https://app.netlify.com/sites/stoic-brahmagupta-f5645d/deploys)
+
 # CostingApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
