@@ -15,7 +15,6 @@ export class CostsheetApiService {
 
   readonly _baseUrl: string = environment.baseUrl;
   readonly _CostsheetUrl = `${this._baseUrl}/costsheets`;
-  
 
   getCostsheets(criteria: any) {
 
