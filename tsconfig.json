@@ -1,6 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "resolveJsonModule": true, // Added to resolve local json from Assets
+    "esModuleInterop": true,   // Added to resolve local json from Assets
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

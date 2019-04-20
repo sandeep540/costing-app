@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: '/api' // relative path ./api (or) /api (or) api
 };

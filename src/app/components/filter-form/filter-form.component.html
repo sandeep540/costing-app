@@ -1,0 +1,52 @@
+
+<form  (ngSubmit)="onSubmit(form.value)" #form="ngForm">
+    <clr-select-container>
+      <label>Select Season</label>
+        <select clrSelect 
+        required
+        name="season"
+        [(ngModel)]="filter.season">
+          <option value=""></option>
+          <option *ngFor="let season of seasons" [value]='season.id'>{{season.name}}</option>
+        </select>
+    </clr-select-container>
+
+    <clr-select-container>
+          <label>Vendor</label>
+            <select clrSelect 
+            name="vendor"
+            [(ngModel)]="filter.vendor">
+              <option value=""></option>
+              <option *ngFor="let vendor of vendors" [value]='vendor.id'>{{vendor.name}}</option>
+            </select>
+    </clr-select-container>
+
+    <clr-select-container>
+        <label>Brand</label>
+          <select clrSelect 
+          name="brand"
+          [(ngModel)]="filter.brand">
+            <option value=""></option>
+            <option *ngFor="let brand of brands" [value]='brand.id'>{{brand.name}}</option>
+          </select>
+    </clr-select-container>
+
+    <clr-select-container>
+        <label>Category</label>
+          <select clrSelect 
+          name="category"
+          [(ngModel)]="filter.category">
+            <option value=""></option>
+            <option *ngFor="let category of categorys" [value]='category.id'>{{category.name}}</option>
+          </select>
+    </clr-select-container>
+
+      <p></p>
+      <p></p>
+      <p></p>
+
+    <div style="text-align: center;">
+        <!-- <button type="submit" class="btn" [disabled]="!form.form.valid (click)="onClick.emit(form)">Search</button> -->
+        <button type="submit" class="btn" [disabled]="!form.form.valid">Search</button>
+    </div>
+</form>

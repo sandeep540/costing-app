@@ -1,0 +1,24 @@
+[
+  {
+    'repeat(20, 30)': {
+      costsheetid: '{{objectId()}}',
+      seasonName: '{{random("2023 Summer Mens Formalwear", "2022 Spring Mens Formalwear", "2022 Fall Womens Sleepwear")}}',
+      productName: '{{lorem(2, "words")}}',
+      isActive: '{{bool()}}',
+      picture: 'http://placehold.it/125x125',
+      costsheetName: '{{lorem(1, "words")}}',
+      vendor: '{{company().toUpperCase()}}',
+      brand: '{{random("Firebalze", "Olive", "Maxwell")}}',
+      category: '{{random("Tops", "Bottoms", "Swimwear")}}',
+      firstCost: '{{floating(100, 400, 2, "$0,0.00")}}',
+      fob: '{{random("blue", "brown", "green")}}',
+      landedCost: '{{floating(100, 400, 2, "$0,0.00")}}',
+      retailCost: '{{floating(100, 400, 2, "$0,0.00")}}',
+      wholesaleMargin: '{{integer(30, 50)}}',
+      retailMargin: '{{integer(20, 40)}}',
+      currency: '$',
+      status:'{{random("Approved", "Rejected", "Hold")}}',
+      duty:'{{integer(5, 14)}}',
+    }
+  }
+]

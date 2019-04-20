@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'costing-app';
+
+  filterCriteria: any;
+
+  getFilterCriteria($event) {
+      // console.log('Raw event ' + $event);
+      this.filterCriteria = $event;
+      console.log('Event emitted' + JSON.stringify(this.filterCriteria));
+  }
+
 }
