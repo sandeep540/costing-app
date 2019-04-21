@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
+import { Costsheet } from '../../model/costsheet';
+
 
 @Component({
   selector: 'app-cost-card',
   templateUrl: './cost-card.component.html',
   styleUrls: ['./cost-card.component.css']
 })
-export class CostCardComponent implements OnInit {
+export class CostCardComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  @Input() costsheet: Costsheet;
 
   ngOnInit() {
   }
+
+  ngAfterViewInit() {
+    // console.log('costsheet passed ==> ' + JSON.stringify(this.costsheet));
+     }
+
 
 }

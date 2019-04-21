@@ -16,7 +16,11 @@
         </header>
         <div class="content-container">
             <div class="content-area">
-                <app-cost-card></app-cost-card>
+
+            <div class="clr-row">
+                <app-cost-card *ngFor="let cs of costsheets" [costsheet]="cs" id='cs.costsheetid'></app-cost-card>
+            </div>
+
             </div>
             <nav class="sidenav">
                 <section class="sidenav-content">

@@ -18,11 +18,11 @@ export class CostsheetApiService {
 
   getCostsheets(criteria: any) {
 
-    console.log('In Costsheets Service');
-    console.table('criteria is -->' + criteria);
+    // console.log('In Costsheets Service');
+    // console.table('criteria is -->' + criteria);
 
     if (environment.production) {
-      return this.http.post<Costsheet[]>(this._CostsheetUrl, criteria).pipe(
+      return this.http.post<Costsheet[]>(this._CostsheetUrl, JSON.stringify(criteria)).pipe(
         catchError(this.errorHandler));
     } else {
       return of(<Array<Costsheet>>costsheetJson['default']);

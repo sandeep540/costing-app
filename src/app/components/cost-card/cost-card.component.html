@@ -1,15 +1,19 @@
-<div class="clr-row">
-    <div class="clr-col-lg-4 clr-col-6">
-        <div class="card">
+<div class="clr-col-lg-12 clr-col-12">
+
+     <div class="card">
 
             <div class="card-block">
                 <div class="card-media-block">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/71IOi6AP76L._UX385_.jpg" class="card-media-image">
+                    <img [src]='costsheet.picture' class="card-media-image">
                     <div class="card-block">
                         
-                            <ul>
-                              <li>Some text</li>
-                              <li>Other Text</li>
+                            <ul  style="list-style-type:none;">
+                              <li>Season : {{costsheet.seasonName}}</li>
+                              <li>Product: {{costsheet.productName}}</li>
+                              <li>Brand: {{costsheet.brand}}</li>
+                              <li>Category: {{costsheet.category}}</li>
+                              <li>Vendor: {{costsheet.vendor}}</li>
+                              <li>Retail: {{costsheet.retailCost}}</li>
                             </ul>
                         
                     </div>
@@ -23,3 +27,4 @@
                 </clr-checkbox-wrapper>
             </div>
         </div>
+</div>
