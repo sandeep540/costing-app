@@ -1,3 +1,4 @@
+import { LocalStorageService } from './services/local-storage.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -11,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+import { StorageServiceModule } from 'ngx-webstorage-service';
 
 
 @NgModule({
@@ -28,7 +31,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     HttpClientModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [LocalStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
