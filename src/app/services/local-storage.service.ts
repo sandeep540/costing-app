@@ -35,7 +35,7 @@ export class LocalStorageService {
     this.storage.clear();
   }
 
-  public removeFromLocalStorage(costsheetId: string): void{
+  public removeFromLocalStorage(costsheetId: string): void {
     const costsheetList = this.storage.get(STORAGE_KEY) || [];
     costsheetList.pop({
         id: costsheetId
